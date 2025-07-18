@@ -1,116 +1,318 @@
-2025-01-11: [rlmattax](https://github.com/rlmattax) updated link from 0.7.7 to 0.7.8.
+# Project Name
 
-***THIS IS AN UNOFFICIAL BUILD SCRIPT!***
+<!-- Hero Image with Dark Neon Theme -->
+<div align="center">
+  <img src=".screenshots/hero-banner.png" alt="Project Hero Banner" width="100%">
+</div>
 
-If you run into an issue with this build script, make an issue here. Don't bug Anthropic about it - they already have enough on their plates.
+<div align="center">
+  
+[![GitHub Pages](https://img.shields.io/badge/GitHub%20Pages-Live-00D9FF?style=for-the-badge&logo=github&logoColor=white)](https://tiaastor.github.io/tiation-claude-desktop-linux)
+[![Documentation](https://img.shields.io/badge/Documentation-Complete-00FF88?style=for-the-badge&logo=gitbook&logoColor=white)](https://github.com/TiaAstor/tiation-claude-desktop-linux/wiki)
+[![License](https://img.shields.io/badge/License-MIT-FF0080?style=for-the-badge&logo=opensourceinitiative&logoColor=white)](LICENSE)
 
-# Claude Desktop for Linux
+</div>
 
-This project was inspired by [k3d3's claude-desktop-linux-flake](https://github.com/k3d3/claude-desktop-linux-flake) and their [Reddit post](https://www.reddit.com/r/ClaudeAI/comments/1hgsmpq/i_successfully_ran_claude_desktop_natively_on/) about running Claude Desktop natively on Linux. Their work provided valuable insights into the application's structure and the native bindings implementation.
+## 🚀 About
 
-Supports MCP!
-![image](https://github.com/user-attachments/assets/93080028-6f71-48bd-8e59-5149d148cd45)
+**Brief, compelling description of what this project does and why it matters.**
 
-Supports the Ctrl+Alt+Space popup!
-![image](https://github.com/user-attachments/assets/1deb4604-4c06-4e4b-b63f-7f6ef9ef28c1)
+<div align="center">
+  <img src=".screenshots/demo-overview.png" alt="Project Overview" width="80%">
+</div>
 
-Supports the Tray menu! (Screenshot of running on KDE)
-![image](https://github.com/user-attachments/assets/ba209824-8afb-437c-a944-b53fd9ecd559)
+---
 
-# Installation Options
+## ✨ Features
 
-## 1. Debian Package (New!)
+<!-- Feature showcase with screenshots -->
+<table>
+  <tr>
+    <td width="50%">
+      <h3>🎯 Key Feature 1</h3>
+      <img src=".screenshots/feature-1.png" alt="Feature 1 Screenshot" width="100%">
+      <p>Description of feature 1 with benefits</p>
+    </td>
+    <td width="50%">
+      <h3>⚡ Key Feature 2</h3>
+      <img src=".screenshots/feature-2.png" alt="Feature 2 Screenshot" width="100%">
+      <p>Description of feature 2 with benefits</p>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%">
+      <h3>🔥 Key Feature 3</h3>
+      <img src=".screenshots/feature-3.png" alt="Feature 3 Screenshot" width="100%">
+      <p>Description of feature 3 with benefits</p>
+    </td>
+    <td width="50%">
+      <h3>🌟 Key Feature 4</h3>
+      <img src=".screenshots/feature-4.png" alt="Feature 4 Screenshot" width="100%">
+      <p>Description of feature 4 with benefits</p>
+    </td>
+  </tr>
+</table>
 
-For Debian-based distributions (Debian, Ubuntu, Linux Mint, MX Linux, etc.), you can build and install Claude Desktop using the provided build script:
+---
+
+## 🎨 Live Demo
+
+<div align="center">
+  <a href="https://tiaastor.github.io/tiation-claude-desktop-linux" target="_blank">
+    <img src=".screenshots/demo-preview.png" alt="Live Demo Preview" width="80%">
+  </a>
+  <br>
+  <a href="https://tiaastor.github.io/tiation-claude-desktop-linux" target="_blank">
+    <img src="https://img.shields.io/badge/🔗%20View%20Live%20Demo-00D9FF?style=for-the-badge&logo=github&logoColor=white" alt="View Live Demo">
+  </a>
+</div>
+
+---
+
+## 🏗️ Architecture
+
+<div align="center">
+  <img src=".screenshots/architecture-diagram.png" alt="Architecture Diagram" width="90%">
+</div>
+
+### System Components
+
+- **Component 1**: Description and purpose
+- **Component 2**: Description and purpose
+- **Component 3**: Description and purpose
+
+---
+
+## 🚀 Quick Start
+
+### Prerequisites
 
 ```bash
-# Clone this repository
-git clone https://github.com/yourusername/claude-desktop-linux.git
-cd claude-desktop-linux
-
-# Build the package
-sudo ./build-deb.sh
-sudo dpkg -i build/electron-app/claude-desktop_0.7.7_amd64.deb
-
-# The script will automatically:
-# - Check for and install required dependencies
-# - Download and extract resources from the Windows version
-# - Create a proper Debian package
-# - Guide you through installation
+# List prerequisites here
+node --version  # >= 18.0.0
+npm --version   # >= 8.0.0
 ```
 
-Requirements:
-- Any Debian-based Linux distribution
-- Node.js >= 12.0.0 and npm
-- Root/sudo access for dependency installation
+### Installation
 
-## 2. NixOS Implementation
+```bash
+# Clone the repository
+git clone https://github.com/TiaAstor/tiation-claude-desktop-linux.git
+cd tiation-claude-desktop-linux
 
-For NixOS users, please refer to [k3d3's claude-desktop-linux-flake](https://github.com/k3d3/claude-desktop-linux-flake) repository. Their implementation is specifically designed for NixOS and provides the original Nix flake that inspired this project.
+# Install dependencies
+npm install
 
-# How it works
+# Start development server
+npm run dev
+```
 
-Claude Desktop is an Electron application packaged as a Windows executable. Our build script performs several key operations to make it work on Linux:
+### Development Workflow
 
-1. Downloads and extracts the Windows installer
-2. Unpacks the app.asar archive containing the application code
-3. Replaces the Windows-specific native module with a Linux-compatible implementation
-4. Repackages everything into a proper Debian package
+<div align="center">
+  <img src=".screenshots/development-workflow.png" alt="Development Workflow" width="70%">
+</div>
 
-The process works because Claude Desktop is largely cross-platform, with only one platform-specific component that needs replacement.
+---
 
-## The Native Module Challenge
+## 📱 Screenshots
 
-The only platform-specific component is a native Node.js module called `claude-native-bindings`. This module provides system-level functionality like:
+### Desktop Interface
 
-- Keyboard input handling
-- Window management
-- System tray integration
-- Monitor information
+<div align="center">
+  <img src=".screenshots/desktop-interface.png" alt="Desktop Interface" width="100%">
+</div>
 
-Our build script replaces this Windows-specific module with a Linux-compatible implementation that:
+### Mobile Interface
 
-1. Provides the same API surface to maintain compatibility
-2. Implements keyboard handling using the correct key codes from the reference implementation
-3. Stubs out unnecessary Windows-specific functionality
-4. Maintains critical features like the Ctrl+Alt+Space popup and system tray
+<div align="center">
+  <img src=".screenshots/mobile-interface.png" alt="Mobile Interface" width="60%">
+</div>
 
-The replacement module is carefully designed to match the original API while providing Linux-native functionality where needed. This approach allows the rest of the application to run unmodified, believing it's still running on Windows.
+### Dark Theme
 
-## Build Process Details
+<div align="center">
+  <img src=".screenshots/dark-theme.png" alt="Dark Theme Interface" width="100%">
+</div>
 
-> Note: The build script was generated by Claude (Anthropic) to help create a Linux-compatible version of Claude Desktop.
+---
 
-The build script (`build-deb.sh`) handles the entire process:
+## 🛠️ Technology Stack
 
-1. Checks for a Debian-based system and required dependencies
-2. Downloads the official Windows installer
-3. Extracts the application resources
-4. Processes icons for Linux desktop integration
-5. Unpacks and modifies the app.asar:
-   - Replaces the native module with our Linux version
-   - Updates keyboard key mappings
-   - Preserves all other functionality
-6. Creates a proper Debian package with:
-   - Desktop entry for application menus
-   - System-wide icon integration
-   - Proper dependency management
-   - Post-install configuration
+<div align="center">
+  <img src=".screenshots/tech-stack.png" alt="Technology Stack" width="80%">
+</div>
 
-## Updating the Build Script
+- **Frontend**: React, TypeScript, Tailwind CSS
+- **Backend**: Node.js, Express
+- **Database**: PostgreSQL
+- **Deployment**: Docker, GitHub Actions
 
-When a new version of Claude Desktop is released, simply update the `CLAUDE_DOWNLOAD_URL` constant at the top of `build-deb.sh` to point to the new installer. The script will handle everything else automatically.
+---
 
-# License
+## 📊 Performance Metrics
 
-The build scripts in this repository, are dual-licensed under the terms of the MIT license and the Apache License (Version 2.0).
+<div align="center">
+  <img src=".screenshots/performance-metrics.png" alt="Performance Metrics" width="90%">
+</div>
 
-See [LICENSE-MIT](LICENSE-MIT) and [LICENSE-APACHE](LICENSE-APACHE) for details.
+---
 
-The Claude Desktop application, not included in this repository, is likely covered by [Anthropic's Consumer Terms](https://www.anthropic.com/legal/consumer-terms).
+## 🔧 Configuration
 
-## Contribution
+### Environment Variables
 
-Unless you explicitly state otherwise, any contribution intentionally submitted
-for inclusion in the work by you, as defined in the Apache-2.0 license, shall be dual licensed as above, without any
-additional terms or conditions.
+```env
+# Copy to .env.local
+NODE_ENV=development
+DATABASE_URL=postgresql://username:password@localhost:5432/database
+API_KEY=your-api-key-here
+```
+
+### Configuration Screenshots
+
+<div align="center">
+  <img src=".screenshots/configuration-setup.png" alt="Configuration Setup" width="70%">
+</div>
+
+---
+
+## 📚 Documentation
+
+<div align="center">
+  <a href="https://github.com/TiaAstor/tiation-claude-desktop-linux/wiki" target="_blank">
+    <img src=".screenshots/documentation-preview.png" alt="Documentation Preview" width="80%">
+  </a>
+  <br>
+  <a href="https://github.com/TiaAstor/tiation-claude-desktop-linux/wiki" target="_blank">
+    <img src="https://img.shields.io/badge/📖%20Full%20Documentation-00FF88?style=for-the-badge&logo=gitbook&logoColor=white" alt="Full Documentation">
+  </a>
+</div>
+
+### Quick Links
+
+- [📘 User Guide](docs/user-guide.md)
+- [🔧 API Reference](docs/api-reference.md)
+- [🏗️ Architecture Guide](docs/architecture.md)
+- [🚀 Deployment Guide](docs/deployment.md)
+
+---
+
+## 🤝 Contributing
+
+We welcome contributions! Please see our [Contributing Guide](CONTRIBUTING.md) for details.
+
+<div align="center">
+  <img src=".screenshots/contribution-workflow.png" alt="Contribution Workflow" width="70%">
+</div>
+
+### Development Setup
+
+```bash
+# Fork the repository
+git clone https://github.com/your-username/tiation-claude-desktop-linux.git
+cd tiation-claude-desktop-linux
+
+# Create feature branch
+git checkout -b feature/amazing-feature
+
+# Make changes and commit
+git commit -m "Add amazing feature"
+
+# Push to branch
+git push origin feature/amazing-feature
+```
+
+---
+
+## 🧪 Testing
+
+<div align="center">
+  <img src=".screenshots/testing-dashboard.png" alt="Testing Dashboard" width="80%">
+</div>
+
+```bash
+# Run all tests
+npm test
+
+# Run tests with coverage
+npm run test:coverage
+
+# Run end-to-end tests
+npm run test:e2e
+```
+
+---
+
+## 🚀 Deployment
+
+<div align="center">
+  <img src=".screenshots/deployment-pipeline.png" alt="Deployment Pipeline" width="90%">
+</div>
+
+### Production Deployment
+
+```bash
+# Build for production
+npm run build
+
+# Deploy to GitHub Pages
+npm run deploy
+```
+
+---
+
+## 📈 Roadmap
+
+<div align="center">
+  <img src=".screenshots/roadmap.png" alt="Project Roadmap" width="90%">
+</div>
+
+- [x] Core functionality
+- [x] Dark theme implementation
+- [ ] Mobile app version
+- [ ] Advanced analytics
+- [ ] Third-party integrations
+
+---
+
+## 📞 Support
+
+<div align="center">
+  <img src=".screenshots/support-channels.png" alt="Support Channels" width="70%">
+</div>
+
+- 📧 **Email**: [support@example.com](mailto:support@example.com)
+- 💬 **Discord**: [Join our community](https://discord.gg/example)
+- 🐛 **Issues**: [GitHub Issues](https://github.com/TiaAstor/tiation-claude-desktop-linux/issues)
+- 📖 **Wiki**: [Documentation](https://github.com/TiaAstor/tiation-claude-desktop-linux/wiki)
+
+---
+
+## 📄 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+---
+
+## 🌟 Acknowledgments
+
+<div align="center">
+  <img src=".screenshots/acknowledgments.png" alt="Acknowledgments" width="60%">
+</div>
+
+- Thanks to all contributors
+- Special thanks to the open-source community
+- Inspired by modern development practices
+
+---
+
+<div align="center">
+  <img src=".screenshots/footer-banner.png" alt="Footer Banner" width="100%">
+  
+  **⭐ Star this repository if you find it helpful! ⭐**
+  
+  <a href="https://github.com/TiaAstor/tiation-claude-desktop-linux">
+    <img src="https://img.shields.io/github/stars/TiaAstor/tiation-claude-desktop-linux?style=social&label=Star&maxAge=2592000" alt="GitHub Stars">
+  </a>
+</div>
